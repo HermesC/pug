@@ -1,7 +1,4 @@
 /node_modules
 /css/styles.css
 /css/styles.min.css
-/sass/layouts/*
-/sass/pages/*
-/pages/*
-
+index.pug
