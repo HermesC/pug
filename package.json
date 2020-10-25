@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "sass --watch assets/sass/style.scss:assets/css/style.css | pug -w -P -o ./ pages/page.pug",
+    "dev": "sass --watch assets/sass/style.scss:assets/css/style.css | pug -w -P -o ./ pages/index.pug",
     "build": "sass assets/sass/style.scss:assets/css/style.css && pug pages/page.pug && css-minify -f assets/css/style.css"
   },
   "author": "",

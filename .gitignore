@@ -1,3 +1,7 @@
 /node_modules
-/css/style.css
-/css/style.css.map
+/css/styles.css
+/css/styles.min.css
+/sass/layouts/*
+/sass/pages/*
+/pages/*
+

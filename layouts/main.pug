@@ -6,8 +6,6 @@ html
         link(rel="stylesheet" href="assets/css/style.css")
     body
         .container-main
-        header.header
-            .container.container-header    
-        block content
-        footer.footer
-            .container.container-footer
+            include ./header   
+            block content
+            include ./footer
