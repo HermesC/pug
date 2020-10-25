@@ -1,0 +1,18 @@
+{
+  "name": "pug",
+  "version": "1.0.0",
+  "description": "Template for quick and handy markup",
+  "main": "index.js",
+  "dependencies": {
+    "css-minify": "^1.0.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch assets/sass/style.scss:assets/css/style.css | pug -w -P -o ./ pages/page.pug",
+    "build": "sass assets/sass/style.scss:assets/css/style.css && pug pages/page.pug && css-minify -f assets/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
