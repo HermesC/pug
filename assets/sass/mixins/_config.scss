@@ -1,0 +1,52 @@
+$bodySizeText:16px;
+$main-color: #000000;
+
+$primary-color: #1fabe2;
+$primary-color-hover: #26c4e6;
+$primary-color-active: #26d0f2;
+
+$link-color: #1fabe2;
+$link-active: #26c4e6;
+
+$greenColor: #75ee58;
+$darkGreenColor: #205541;
+
+$yellowColor: #ffd500;
+
+
+//customs
+
+//end customs
+
+
+$requiredColor: #d32f33;
+$successColor: #73933e;
+
+@media (max-width: 767px) {
+
+  $paddingMobCount: 10;
+  $paddingMob: $paddingMobCount;
+
+  @if $paddingMob == 15 {
+  } @else {
+    .container {
+      padding-left: $paddingMobCount + px !important;
+      padding-right: $paddingMobCount + px !important;
+    }
+    .row {
+      margin-left: - $paddingMobCount + px !important;
+      margin-right: - $paddingMobCount + px !important;
+    }
+    .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, [class*="col-auto"], [class*="col-xs-"], [class*="col-sm-"], [class*="col-md-"], [class*="col-lg-"], [class*="col-xl-"] {
+      padding-left: $paddingMobCount + px !important;
+      padding-right: $paddingMobCount + px !important;
+      &.items_wr_full {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+
+}
+
+$containerWidth:1260;

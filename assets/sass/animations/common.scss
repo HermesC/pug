@@ -1,0 +1,35 @@
+@keyframes bounce {
+    0%,
+    50%,
+    100% {
+      transform: translateY(0px) translateX(0px) rotate(0.3deg);
+    }
+    30%,
+    80% {
+      transform: translateY(8px) translateX(8px) rotate(0.3deg);
+    }
+  }
+  g{
+    @for $i from 1 through 100{
+      &:nth-last-child(#{$i}){
+        animation: fade-away 2s ease-in;
+        animation-delay: calc(#{$i}ms * 100ms + 500ms);
+        animation-fill-mode: forwards;
+      }
+      g {g{
+        &:nth-child(#{$i}){
+          animation: fade-away 2s ease-in;
+          animation-delay: #{$i}00ms;
+          animation-fill-mode: forwards;
+        }
+      }
+      }
+    }
+  } 
+  @keyframes fade-away{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}

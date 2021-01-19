@@ -1,0 +1,198 @@
+//блок с полосками
+
+//общая высота блока
+$menu-mob-height:47;
+//$menu-mob-height:54;
+
+//ширина и высота полосок
+$menu-mob-div-width:16;
+$menu-mob-div-height:2;
+//отступ полосок
+$menu-mob-div-margin-top:4;
+////////////////////////
+$allHeight:($menu-mob-div-height*3)+($menu-mob-div-margin-top*2);
+$menu-mob-div-margin-topFirst:($menu-mob-height - $allHeight)/2;
+$menu-mob-div-margin-topAll:$menu-mob-div-margin-topFirst + ($menu-mob-div-margin-top*2) + ($menu-mob-div-height*2);
+///////////////////////
+.menu_mob {
+  cursor: pointer;
+  width: 46px;
+  height:  $menu-mob-height + px;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  right: 12px;
+}
+
+.menu_mob div {
+  position: absolute;
+  width: $menu-mob-div-width + px;
+  height: $menu-mob-div-height + px;
+  background: #fff;
+  top: 0;
+  margin-top: $menu-mob-div-margin-topAll + px;
+  left: 50%;
+  margin-left: -($menu-mob-div-width/2) + px;
+}
+.menu_mob div:first-child {
+  margin-top: $menu-mob-div-margin-topFirst + px;
+}
+.menu_mob div:first-child:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  margin-top: $menu-mob-div-height + $menu-mob-div-margin-top + px;
+  content: '';
+}
+
+.div-menu {
+  cursor: pointer;
+  width: 16px;
+  height:  $menu-mob-height + px;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  right: 12px;
+  .animate-menu-bl {
+    display: block;
+    position: absolute;
+    $w:16;
+    $h:16;
+    width: $w + px;
+    height: $h + px;
+    right: 0;
+    top: 50%;
+    margin-top: -($h / 2) + px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+
+
+    div {
+      overflow: hidden;
+      $bg: #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background: $bg;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:first-child {
+        bottom: auto;
+        top: 0;
+      }
+      &.center {
+        bottom: 7px !important;
+        width: 12px;
+        &:before {
+          left: -100%;
+        }
+      }
+      &.top {}
+      &.bottom {
+        width: 8px;
+      }
+      &:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: auto;
+        right: -100%;
+        top: 0;
+        content: '';
+        background: #fff;
+        transition: 0.3s all ease-in;
+      }
+    }
+  }
+
+  &.active {
+    .animate-menu-bl {
+      div {
+        &.center {
+          width: 0;
+          opacity: 0;
+        }
+        &.top {
+          transform: rotate(135deg);
+          top: 7px;
+          width: 20px;
+        }
+        &.bottom {
+          transform: rotate(-135deg);
+          bottom:7px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.mob-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #374898;
+  @include Opacity(0.76);
+  top: 0;
+  left: 0;
+  cursor: default;
+}
+
+.off-scroll {
+  overflow-y: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.overlay-phones {
+  @extend .mob-overlay;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+
+  .off-scroll {
+    position: fixed;
+  }
+}
+
+@media (max-width: 850px) {
+
+
+}
+@media (max-width: 767px) {
+
+
+}
+@media (max-width: 450px) {
+
+}
+@media (max-width: 380px) {
+
+}

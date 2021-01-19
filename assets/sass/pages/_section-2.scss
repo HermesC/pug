@@ -1,0 +1,253 @@
+.section {
+    &-2 {
+        z-index: 3;
+        position: relative;
+
+        &-container {
+            position: relative;
+            height: 570px;
+            margin-top: 64px;
+        }
+        .img-right{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }        
+
+    &-text {
+            &-pros {                
+                padding-left: 130px;
+                padding-right: 10px;
+                span {
+                    &:first-child {
+                        font-family: FuturaDemiC;
+                        display: block;
+                        font-size: 22px;
+                        color: rgb(0, 0, 0);
+                        line-height: 1.7;
+                        font-weight: bold;
+                    }
+
+                    &:last-child {
+                        font-size: 20px;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        &-pros {
+            display: flex;
+            flex: auto;
+            justify-content: center;
+            background-color: #f5f5f5;
+
+            img {
+                margin-right: 20px;
+            }
+
+            span {
+                display: block;
+
+                &:first-child {
+                    font-size: 22px;
+                    line-height: 2.091;
+                    font-weight: bold;
+                }
+
+                &:last-child {
+                    font-size: 22px;
+                    line-height: 2.091;
+                    max-width: 300px;
+                }
+            }
+
+            &-rhombus {
+                display: flex;
+                position: absolute;
+                width: 545px;
+                left: 50%;
+                opacity: 0;
+                flex-direction: row;               
+                &:last-child{
+                    .pros-rhombus{
+                        &-text{
+                            
+                        }
+                        &-arr{
+
+                        }
+                    }
+                }
+                &:nth-child(-n+3) {
+                    .pros-rhombus-text{
+                        text-align: left ;
+                    }
+                    
+                }        
+                &:nth-last-child(-n+3) {
+                    .pros-rhombus-text{
+                        text-align: right ;
+                    }
+                }
+                &-text {
+                    opacity: 0;
+                    font-size: 36px;
+                    top: 232px;
+                    left: calc(50% - 118px);
+                    position: absolute;
+                    color: rgb(0, 87, 64);
+                    line-height: 2.091;
+                    font-weight: bold;
+
+                }
+            }
+
+            span {
+                text-align: right;
+            }
+
+            $y-step: 81px;
+            $x-step: 210px;
+            $border: 30px;
+            $offset: 0px;
+            $fullgeight: $y-step * 2;
+
+            &-rhombus-1 {
+                margin-left: -140px;
+                .pros-rhombus-text{
+                    margin: 12px;
+                }
+                .pros-rhombus-arr{
+                    margin-top: 25px;
+                }
+            }
+
+            &-rhombus-2 {
+                top: $y-step + $border / 2;
+                margin-left: 20px + $offset;
+            }
+
+            &-rhombus-3 {
+                top: $fullgeight + $y-step + $border / 0.95;
+                margin-left: 22px + $offset;
+            }
+
+            &-rhombus-4 {
+                flex-direction: row-reverse;
+                top: $y-step + $border / 2;
+                margin-left: -651px + $offset;
+            }
+
+            &-rhombus-5 {
+                flex-direction: row-reverse;
+                top: $fullgeight + $y-step + $border / 0.95;
+                margin-left: -651px + $offset;
+            }
+
+            &-rhombus-6 {
+                flex-direction: row-reverse;
+                top: 374.5px;
+                margin-left: -495px + $offset;
+                .pros-rhombus-text{
+                    margin-bottom: 12px;
+                }
+                .pros-rhombus-arr{
+                    margin-bottom: 25px;
+                }
+            }
+
+            &-rhombus-img {
+                min-width: 187px;
+                height: 162px;
+                display: flex;
+
+                img {
+                    margin: auto;
+                }
+            }
+
+            @for $i from 1 through 6 {
+                @if $i < 4 {
+                    &-rhombus-img-#{$i} {
+                        top: calc(50px * $i);
+                        background-image: url('/assets/images/section-2/bg-rhombus-#{$i}.png');
+                        background-size: cover;
+                    }
+                }
+
+                @else {
+                    &-rhombus-img-#{$i} {
+                        background-image: url('/assets/images/section-2/bg-rhombus-#{$i - 3}.png');
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.advntages {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.advntages-wrapper {
+    img {
+        position: absolute;
+    }
+    opacity: 0;
+    min-height: 90px;
+    width: 100%;
+    margin: 0 5px 0px 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    border-radius: 5px;
+
+    &:first-child {
+        img {
+            padding-top: 10px;
+        }
+
+    }
+    &:last-child {
+        img {
+            padding-top: 10px;
+        }
+
+    }
+}
+
+.arrow-right {
+    transform: rotateY(180deg);
+}
+
+.pros-rhombus {
+    &-text {
+        font-size: 20px;
+        line-height: 1.2;
+
+        margin: auto 0px;
+        width: 200px;
+
+        
+    }
+
+    &-arr {
+        margin: auto 21px;
+    }
+}
+.direction-arrow{
+    background-image: url(/assets/images/section-2/arrow.png);
+    background-image: url(/assets/images/section-2/arrow.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 21px;
+}
+.direction-arrow-right{
+    transform: rotate(180deg);
+}

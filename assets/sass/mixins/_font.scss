@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url(../../assets/fonts/futurademic.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaBookC';
+  src: url(../../assets/fonts/futurabookc.otf)  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?cekg2c');
+  src:  url('../fonts/icomoon.eot?cekg2c#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?cekg2c') format('truetype'),
+  url('../fonts/icomoon.woff?cekg2c') format('woff'),
+  url('../fonts/icomoon.svg?cekg2c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin svgIcon {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin fontMain {
+  font-family: 'FuturaDemiC';
+}
+@mixin fontBook {
+  font-family: 'FuturaBookC';
+}
+

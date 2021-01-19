@@ -1,0 +1,87 @@
+mixin culture_tab(type, soils)
+    // ПОДДЕРЕЖИВАЕТ ДВА ТИПА ВКЛАДОК, НОМЕР 1 - ПЕРВАЯ ВКЛАДКА В МАКЕТЕ, 2 ВКЛАДКА НОМЕР 2
+    .custom-tabs-wrapper
+        if type == '1'
+            fieldset
+                legend.col-3
+                    div(class="title-tab tab-1 custom-title-active" data-hint="Соняшник, соя та цукрові буряки")
+                        .img-wrapper.bg-1.highlighted
+                    div(class="title-tab tab-2" data-hint="Кукурудза")
+                        .img-wrapper.bg-2
+                    div(class="title-tab tab-3" data-hint="Ріпак")
+                        .img-wrapper.bg-3 
+                .button.button-left
+                    img(src="/assets/images/section-4/arrow-sided.png", alt="")
+                .button.button-right.button-active
+                    img(src="/assets/images/section-4/arrow-sided.png", alt="")
+                .custom-tabs-content.custom-tabs-active.tab-first                                
+                    .row
+                        .col-12.custom-tabs-content-info
+                            .col-6 Соняшник, соя та цукрові буряки
+                            .col-6 
+                                ul 
+                                    li На соняшнику, сої та цукрових буряках вносять по появи сходів культури
+                        .col-12.custom-tabs-content-logo
+                            .col-2 
+                                span СТАРЕС®
+                                img(src="/assets/images/section-4/arrow.png", alt="")
+                    .row.custom-tabs-wrapper-item
+                        input(type="hidden", name="img-path" data-img-path="/assets/images/section-4/sunflower_scheme.svg")                        
+                        img(class="fade-away" src="/assets/images/section-4/sunflower_scheme.svg" alt="")
+                .custom-tabs-content.tab-second                                
+                    .row
+                        .col-12.custom-tabs-content-info 
+                            .col-6 Кукурудза
+                            .col-6 
+                                ul 
+                                    li На кукурудзі допускається застосування по сходам культури до 4 листка
+                                    li Фази бур’янів: злакові- до1-го листка; дводольні - сім’ядолі
+                                    li Кукурудза особливо стійка до пропізохлору
+
+                        .col-12.custom-tabs-content-logo
+                            .col-2
+                                span СТАРЕС®
+                                img(src="/assets/images/section-4/arrow.png", alt="")
+                    .row.custom-tabs-wrapper-item
+                        input(type="hidden", name="img-path" data-img-path="/assets/images/section-4/corn_scheme.svg")                        
+                .custom-tabs-content.tab-thirst                                
+                    .row
+                        .col-12.custom-tabs-content-info 
+                            .col-6 Ріпак
+                            .col-6 
+                                ul 
+                                    li На ріпаку допускається застосування по сходам культури до 4 листка
+                                    li Фази бур’янів: злакові- до1-го листка;                                
+                        .col-12.custom-tabs-content-logo
+                            .col-2
+                                span СТАРЕС®
+                                img(src="/assets/images/section-4/arrow.png", alt="")
+                    .row.custom-tabs-wrapper-item
+                        input(type="hidden", name="img-path" data-img-path="/assets/images/section-4/rape_scheme.svg")                        
+        else
+            fieldset
+                legend
+                    .title-tab.tab-1.custom-title-active
+                        .img-wrapper.bg-1.highlighted
+                    .title-tab.tab-2
+                        .img-wrapper.bg-2
+                    .title-tab.tab-3
+                        .img-wrapper.bg-3 
+                .button.button-left
+                    img(src="/assets/images/section-4/arrow-sided.png", alt="")
+                .button.button-right.button-active
+                    img(src="/assets/images/section-4/arrow-sided.png", alt="")
+                .custom-tabs-content.custom-tabs-active.tab-1                                
+                    .row
+                        .col-12
+                            .col-6 Вкладка намба 2
+                            .col-6 На соняшнику, сої та цукрових буряках вносять по появи сходів культури
+                        .col-12
+                            .col-6 СТАРЕС®
+                            .col-6
+                                img(src="/assets/images/section-4/arrow.png", alt="")
+                    .row.custom-tabs-wrapper-item
+                        input(type="hidden", name="img-path" data-img-path="/assets/images/section-4/sunflower_scheme.svg")                        
+                        img(src="/assets/images/section-4/sunflower_scheme.svg" alt="")
+
+                                                

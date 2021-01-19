@@ -1,4 +1,24 @@
-@import "layouts/footer";
+@import "mixins/config";
+@import "mixins/mixin";
+@import "settings/reset";
+@import "animations/svg";
+@import "animations/common";
+@import "animations/section-1";
+@import "mixins/font";
+@import "mixins/reusable-effects/common";
 @import "layouts/header";
+@import "layouts/main-menu";
+@import "layouts/menu-mob";
 @import "layouts/common";
 @import "pages/page";
+@import "pages/section-2";
+@import "pages/section-3";
+@import "pages/section-4";
+@import "pages/section-6";
+//* MEDIA QUERIES
+@import "media/section-1-media";
+@import "media/section-2-media";
+
+@import "layouts/footer-style";
+@import "layouts/footer-btns";
+

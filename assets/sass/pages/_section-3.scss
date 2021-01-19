@@ -1,0 +1,213 @@
+.section {
+
+    //*********************** СЕКЦИЯ ****************
+    &-3 {
+        background-color: $bg-color;
+        height: 110%;
+        &-text {
+            font-weight: 600;
+
+            div {
+                &:first-child {
+                    font-family: FuturaDemiC;
+                    font-size: 21px;
+                    color: #20553f;
+                    font-weight: 700;
+                }
+
+                &:last-child {
+                    font-size: 19px;
+                    font-weight: normal;
+                }
+            }
+
+            line-height: 1.917;
+        }
+
+        &__info {
+            &__first {
+                margin-top: 124px;
+            }
+
+            &__second {
+                .section-3-text {
+                    div {
+                        &:first-child {
+                            color: #31ba70;
+                        }
+                    }
+                }
+
+                margin-top: 321px;
+            }
+
+            &__thirst {
+                .section-3-text {
+                    div {
+                        &:first-child {
+                            color: #31ba70;
+                        }
+                    }
+                }
+
+                margin-top: 49px;
+            }
+        }
+    }
+
+    .img-block {
+        &-first {
+            img {
+                &:first-child {
+                    margin-top: -100px;
+                }
+            }
+        }
+
+        &-secod {}
+
+        &-thirst {}
+    }
+}
+
+.img-block {
+    margin-top: 60px;
+    margin-left: 34px;
+}
+
+.img-block-first {
+    &:first-child {}
+
+    img {
+        &:first-child {
+            margin-top: -150px;
+        }
+    }
+}
+
+.img-block-second {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+
+    img {
+        &:first-child {
+            margin-left: -100px;
+        }
+    }
+}
+
+.img-block-second-inner {
+    position: absolute;
+    bottom: -130px;
+    right: 30px;
+}
+
+.circle {
+    $sub-circle-radius: 70%;
+
+    &__info {
+        font-weight: 600;
+        display: flex;
+        padding-top: 70px;
+        align-items: center;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        top: 12%;
+        left: 19%;
+        width: $sub-circle-radius;
+        height: $sub-circle-radius;
+        text-align: center;
+        font-size: 24px;
+        color: rgb(0, 87, 64);
+        line-height: 1.2;
+        background-color: #fff;
+        border-radius: 50%;
+
+        h1 {
+            font-size: 65px;
+            font-weight: bold;
+            font-family: "FuturaDemiC";
+            color: #00ab4f;
+            text-transform: uppercase;
+            line-height: 0.883;
+
+        }
+
+        span {
+            text-align: left;
+            display: block;
+            height: fit-content;
+            font-size: 21px;
+            width: 80%;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &:first-child {
+            .circle__svg {
+                img {
+                    top: -243px;
+                    left: -80px;
+                }
+            }
+
+            margin-left: -420px;
+            left: 309px;
+            top: 321px;
+
+            .circle__info {
+                padding-top: 62px;
+                font-weight: 600;
+                padding-left: 10px;
+                top: 27px;
+                left: 32px;
+                width: 300px;
+                height: 300px;
+
+                h1 {
+                    align-self: baseline;
+                    color: #005740;
+                }
+            }
+
+        }
+
+        &:last-child {
+            .circle__info {
+                h1 {
+                    text-align: right;
+                    margin-top: 33px;
+                }
+            }
+
+            .circle__svg {
+                img {
+                    &:nth-child(3) {
+                        top: 417px;
+                        left: 440px;
+                    }
+
+                    &:nth-child(2) {
+                        right: -208px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__container {
+        margin-top: 60px;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            position: absolute;
+        }
+    }
+
+}

@@ -1,0 +1,4 @@
+mixin circle(size, radius_main_arc, x_offset, y_offset, color_main_arc, color_sub_arc, stroke = 3)
+     svg(width=size height=size)
+        path(class="st0" d=`M${x_offset},${y_offset} a${radius_main_arc},${radius_main_arc} 0 1,1 -60,40` stroke=color_main_arc stroke-width=stroke fill="transparent")
+        path(d=`M${x_offset},${y_offset} a${radius_main_arc},${radius_main_arc} 0 0,0 -60,40` stroke=color_sub_arc stroke-width=stroke fill="transparent")

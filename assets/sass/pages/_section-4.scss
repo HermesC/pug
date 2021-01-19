@@ -1,0 +1,192 @@
+ //*********************** СЕКЦИЯ ****************
+ .section-4 {
+     background-color: white;
+
+     &-wrapper {
+         background: #fff;
+     }
+
+     //************************ СТИЛИ БАКОВЫХ СМЕСЕЙ *******************
+     .mixtures {
+         background-color: white;
+         border-radius: 15px;
+
+         &__title {
+             flex: 1 1;
+             text-align: center;
+             font-size: 24px;
+             text-transform: uppercase;
+             line-height: 1.917;
+             text-decoration: underline;
+             color: $disabled-color-1;
+
+             &__active {
+                 color: rgb(0, 171, 79);
+                 text-decoration: none;
+             }
+         }
+
+         &__title-wrapper {
+             display: flex;
+         }
+
+         //* ОСНОВНОВЙ КОНТЕНТ БАК СМЕСЕЙ
+         &__content {
+             background-color: white;
+             border-radius: 15px;
+             display: none;
+
+             &__left {}
+
+             &__active {
+                 display: block;
+             }
+
+             &__title {
+                 margin-top: 20px;
+                 margin-bottom: 20px;
+             }
+         }
+
+         &__content-wrapper {
+             display: flex;
+             flex-direction: column;
+             background-color: #fff;
+         }
+
+         &__list {
+             &__title {
+                 font-size: 24px;
+                 color: rgb(0, 87, 64);
+                 line-height: 1.917;
+                 font-weight: bold;
+             }
+
+             &__text {
+                 margin-top: 15px;
+                 margin-bottom: 15px;
+             }
+
+             &__pros {
+                 flex: 2 2;
+
+                 ul {
+                     margin-left: 14px;
+                 }
+
+                 ul li {
+                     list-style: none;
+                     margin-top: 20px;
+
+                     &:before {
+                         content: "";
+                         width: 4%;
+                         height: 14px;
+                         position: relative;
+                         margin-right: 25px;
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                         background-position: center;
+                         background-image: url(/assets/images/section-4/list-img.png);
+                     }
+                 }
+             }
+
+             &__img {
+                 img {
+                     position: relative;
+
+                     &:first-child {
+                         left: -80px;
+                         top: 40px;
+                     }
+
+                     &:last-child {
+                         top: -50px;
+                         left: 20px;
+                     }
+                 }
+             }
+
+             &__pros__wrapper {
+                 display: flex;
+                 flex-direction: row;
+             }
+         }
+     }
+
+     //************************ КНОПКИ ЛЕВО-ПРАВО НА ПАНЕЛИ ПЕРЕКЛЮЧЕНИЯ КУЛЬТУР *******************
+     .button {
+         $button-size: 100px;
+         display: flex;
+         position: absolute;
+         width: 50px;
+         height: 25px;
+         top: 50%;
+         z-index: 4;
+         /* высота в два раза меньше ширины, иначе получится полуовал */
+         border: 2px solid $disabled-color;
+         border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+         /* угол состоит из половины ширины (50% от 10em = 10em : 2 = 5em) и всей высоты (100% от 5em = 5em) */
+         background-color: $disabled-color;
+
+         img {
+             margin: auto;
+             transform: rotate(-90deg);
+         }
+
+         &-left {
+             left: -12px;
+             transform: rotate(90deg);
+         }
+
+         &-right {
+
+             right: -12px;
+             margin: auto 0;
+             transform: rotate(270deg);
+
+         }
+
+         &-active {
+             border-color: $tab-arrow-color;
+             background-color: $tab-arrow-color;
+         }
+     }
+
+     &-title {
+         font-size: 19.302px;
+         color: rgb(0, 171, 79);
+         text-transform: uppercase;
+         line-height: 2.383;
+         font-weight: bold;
+     }
+
+     //************************ СПИСОК ОСОБЕННОСТЕЙ ПРИМЕНЕНИЯ **********************
+     ul {
+         list-style: none;
+         font-size: 22px;
+         color: rgb(56, 56, 56);
+         line-height: 1.5;
+
+         b {
+             text-transform: uppercase;
+         }
+     }
+
+     ul li::before {
+         content: "\2022";
+         /* Add content: \2022 is the CSS Code/unicode for a bullet */
+         color: $extra-color;
+         transform: scale(2.5);
+         /* Change the color */
+         font-weight: bold;
+         /* If you want it to be bold */
+         display: inline-block;
+         /* Needed to add space between the bullet and the text */
+         width: 1em;
+         /* Also needed for space (tweak if needed) */
+         margin-left: -1em;
+         /* Also needed for space (tweak if needed) */
+     }
+ }

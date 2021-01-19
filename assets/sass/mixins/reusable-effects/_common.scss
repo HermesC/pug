@@ -1,0 +1,37 @@
+$color: #75ed57;
+$height: 98px;
+$width: calc(#{$height} / 2);
+$inner-height: calc(#{$width} * 1.428);
+$inner-width: calc(#{$height} / 1.4);
+$top: 2px;
+$left: -50px;
+$top-outer: 0px;
+// + n px for the rounded border
+$right-outer: calc(-1 * #{$width} + 8px);
+
+.rounded-triangle {
+    &__inner {
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        background-color: $color;
+        width: $inner-width;
+        height: $inner-height;
+        top: $top;
+        left: $left;
+        position: relative;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+
+    &__outer {
+        position: absolute;
+        width: $width;
+        height: $height;
+        top: $top-outer;
+        right: $right-outer;
+        overflow: hidden;
+    }
+}

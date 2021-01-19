@@ -1,0 +1,54 @@
+$delay_1: 500ms;
+$delay_2: 1000ms;
+.show_elemets{
+    animation-name: show-elements;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    @for $i from 0 through 10{
+        $offset: calc(#{$delay_1} * #{$i});
+        &:nth-child(#{$i}){
+            animation-delay: $offset;
+        }
+    }
+}
+@keyframes show-elements{
+    from {
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.rhombus_offset{
+    @for $i from 0 through 7{
+        $offset: calc(#{$delay_1} * #{$i});
+        @if $i > 4 {
+            @if $i == 5{
+                &:last-child{
+                    animation-delay: $offset !important;
+                }
+            }@else if $i == 6{
+                &:nth-child(6){
+                    animation-delay: $offset !important;
+                }
+            }@else{
+                &:nth-child(5){
+                    animation-delay: $offset !important;
+                }
+            }
+        }@else{
+            &:nth-child(#{$i}){
+                animation-delay: $offset !important;
+            }
+        }
+        
+    }
+}
+.children_offset{
+    @for $i from 0 through 10{
+        $offset: calc(#{$delay_2} * #{$i} * 1000ms);
+        &:nth-child(#{$i}){
+            animation-delay: $offset !important;
+        }
+    }
+}

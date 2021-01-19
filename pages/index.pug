@@ -1,6 +1,564 @@
 extends ../layouts/main
+include ../mixins/tab.pug
+include ../mixins/circle.pug
+ - var bigCircleRadius = '230'
+ - var smallCircleRadius = '175'
 block content
-    .container.container-content
+        .section-1
+            .container                
+                .div-menu.d-md-none
+                    .animate-menu-bl
+                        .top
+                        .center
+                        .bottom
+                .row.align-items-center
+                    .col-auto
+                        .logo-wrapp
+                            a.logo(href='/')
+                                img(src='/assets/images/header/header-logo.png' alt='')
+                    .col.main-menu-col
+                        nav.main-menu
+                            ul
+                                li
+                                    span
+                                        i Безпека
+                                li
+                                    span
+                                        i Ефективність
+                                li
+                                    span
+                                        i Переваги
+                                li
+                                    span
+                                        i Застосування
+                                li
+                                    span
+                                        i Де придбати
+                    .menu-mob-wrapp.d-md-none
+                        nav.main-menu
+                            ul
+                                li
+                                    span
+                                        i Безпека
+                                li
+                                    span
+                                        i Ефективність
+                                li
+                                    span
+                                        i Переваги
+                                li
+                                    span
+                                        i Застосування
+                                li
+                                    span
+                                        i Де придбати
+                .static-text 
+                    img(src="/assets/images/section-1/bg-static-text.png", alt="")
+                    span СТАРЕС® <br>
+                        div
+                            a(href="#") Де придбати
+                .static-images                        
+                            .static-clouds                            
+                                img(src='/assets/images/section-1/cloud-1.png', alt="")
+                                img(src="/assets/images/section-1/cloud-2.png", alt="")
+                .col-8.section-1-content
+                    .row
+                        .text-add.col-12.col-md-8 Безпечний до культур <br>безжальний до бур’янів
+                    .row
+                        .text-desc.col-9 Новий досходовий та ранньопісля сходовий гербіцид від Nufarm проти злакових та деяких дводольних бур’янів
+                            .rounded-triangle__outer 
+                                .rounded-triangle__inner
+                        .img-block
+                            img(data-xrange="20" data-yrange="40" src="/assets/images/section-1/static-3.png", alt="")
+                            img(data-xrange="20" data-yrange="40" data-invert="true" src="/assets/images/section-1/static-1.png", alt="")                        
+                            img(data-xrange="40" data-yrange="40" src="/assets/images/section-1/static-2.png", alt="")                                                    
         
+        a(href="#" class="arrow-down")
+            img(src="/assets/images/section-1/arrow-down.png", alt="")                            
+        .section-2
+            .img-right
+                img(src="/assets/images/section-2/img-right.png", alt="")
+            .section-title.title-color-green-light Переваги 
+            .container                                
+                .row.justify-content-center  
+                    .advntages                  
+                        .advntages-wrapper
+                            img(src="/assets/images/section-2/pros-1.png", alt="")
+                            .section-2-text-pros
+                                span Діюча речовина
+                                span пропізохлор                    
+                        .advntages-wrapper
+                            img(src="/assets/images/section-2/pros-2.png", alt="")
+                            .section-2-text-pros
+                                span Культури
+                                span соняшник, кукурудза, соя, ріпак і цукрові буряки                    
+                        .advntages-wrapper
+                            img(src="/assets/images/section-2/pros-3.png", alt="")
+                            .section-2-text-pros
+                                span Спектр дії
+                                span однорічні злакові та деякі дводольні бур’яни
+                .row.justify-content-center.section-2-container
+                    .section-2-pros-rhombus-text СТАРЕС®
+                    .section-2-pros-rhombus.section-2-pros-rhombus-1
+                        .section-2-pros-rhombus-img.section-2-pros-rhombus-img-1
+                            img(src="/assets/images/section-2/rhombus-1.png", alt="")
+                        .pros-rhombus-arr
+                            .direction-arrow.direction-arrow-right
+                        .pros-rhombus-text Тривала дія до 12 тижнів
+                    .section-2-pros-rhombus.section-2-pros-rhombus-2
+                        .section-2-pros-rhombus-img.section-2-pros-rhombus-img-2
+                            img(src="/assets/images/section-2/rhombus-2.png", alt="")
+                        .pros-rhombus-arr
+                            .direction-arrow.direction-arrow-right
+                        .pros-rhombus-text Ефективність мало залежить від умов зволоження
+                    .section-2-pros-rhombus.section-2-pros-rhombus-3
+                        .section-2-pros-rhombus-img.section-2-pros-rhombus-img-3
+                            img(src="/assets/images/section-2/rhombus-3.png", alt="")
+                        .pros-rhombus-arr
+                            .direction-arrow.direction-arrow-right
+                        .pros-rhombus-text Можливість застосування у бакових сумішах з гербіцидами ЕКЛІПС®, КЛОЗЕ® та ін.
+                    .section-2-pros-rhombus.section-2-pros-rhombus-4
+                        .section-2-pros-rhombus-img.section-2-pros-rhombus-img-4
+                            img(src="/assets/images/section-2/rhombus-6.png", alt="")
+                        .pros-rhombus-arr
+                            .direction-arrow
+                        .pros-rhombus-text Висока селективність
+                    .section-2-pros-rhombus.section-2-pros-rhombus-5
+                        .section-2-pros-rhombus-img.section-2-pros-rhombus-img-5
+                            img(src="/assets/images/section-2/rhombus-5.png", alt="")
+                        .pros-rhombus-arr 
+                            .direction-arrow
+                        .pros-rhombus-text Широке вікно застосування до 4 листків у окремих культур
+                    .section-2-pros-rhombus.section-2-pros-rhombus-6
+                        .section-2-pros-rhombus-img.section-2-pros-rhombus-img-6
+                            img(src="/assets/images/section-2/rhombus-4.png", alt="")
+                        .pros-rhombus-arr
+                            .direction-arrow
+                        .pros-rhombus-text Не впливає на формування бульбочок сої  
+        .section-3
+            div(style="position: absolute;")   
+                img(src="/assets/images/section-3/img-left.png", alt="")       
+            .section-title.title-color-green Ефективність
+            .container           
+                .row.justify-content-center
+                    .col-3.section-3__info__first
+                        .section-3-text
+                            div Дводольні
+                            div Лобода біла <br> Паслін чорний <br> Гірчак розлогий <br> Дурман звичайний <br> Жовтозілля звичайне <br> Кропива глуха <br> Мати-й-мачуха звичайна <br> Рутка лікарська<br> Спориш звичайний <br> Щавель горобиний
+                        .img-block-first.img-block                            
+                            img(src="/assets/images/section-3/pic-1.png", alt="")
+                            img(src="/assets/images/section-3/pic-2.png", alt="")                            
+                    .col-5
+                        .img-block-second
+                            img(src="/assets/images/section-3/pic-3.png", alt="")
+                            .img-block.img-block-second-inner
+                                img(src="/assets/images/section-3/pic-4.png", alt="")                                                                         
+                                img(src="/assets/images/section-3/pic-5.png", alt="")
+                        .circle__container                            
+                            .circle__wrapper
+                                .circle__svg
+                                    +circle(370, 168, 120, 20, '#005740', '#77ed5b')                                      
+                                    img(src="/assets/images/section-3/shape1.png", alt="")
+                                .circle__info 
+                                    h1 81% 
+                                    span Ефективність не нижче 81%
+                                        | проти 10 видів
+                                        | дводольних бур'янів:
+                                       
+                            .circle__wrapper
+                                .circle__svg
+                                    +circle(550, 230, 200, 50, '#03ac51', '#77ed5b')
+                                    img(src="/assets/images/section-3/shape3.png", alt="")                                                                                  
+                                    img(src="/assets/images/section-3/shape2.png", alt="")                                     
+                                .circle__info                                      
+                                    span Ефективність не нижче 93%
+                                        | проти 22 видів злакових
+                                        | та дводольних бур'янів:                                                                                                                                                   
+                                        h1 93%
+                    .col-4.img-block-thirst                      
+                        .row
+                            .col-6.section-3__info__second
+                                .section-3-text
+                                    div Злакові
+                                    div Бромус житній <br> Бромус стерильний <br> Вівcюг звичайний <br> Метлюг звичайний <br> Мишій <br> Пажитниця <br> Пальчатка <br> Плоскуха звичайна <br> Тонконіг однорічний
+                            .col-6.section-3__info__thirst
+                                .section-3-text
+                                    div Дводольні 
+                                    div Волошка синя <br> Галінсога <br>Грицики звичайні <br> Зірочник середній <br> Кривоцвіт польовий <br> Кучерявець<br> Софії Лутига<br> Мак <br> Паслін чорний <br> Підмаренник чіпкий <br> Ромашка <br> Талабан польовий <br> Щириця
+        .section-4
+            .section-title.title-color-green-light Особливості застосування
+            .col-10.mx-auto
+                .row.justify-content-center 
+                    .col-5   
+                    .col-6
+                        ul
+                            li Обов’язкової заробки в ґрунт не потребує 
+                            li Проте в умовах посухи заробка в ґрунт на глибину до 5 см підвищує ефективність препарату
+                            li <span> <b>  Важливо!</b> </span> <br> Якість підготовки ґрунту є більш критичною, ніж заробка                
+                .row.justify-content-center
+                    +culture_tab('1', [
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},
+                        {'pos': '00', 'src': 'text'},                        
+                    ])
+        .section-4
+            .col-10.mx-auto
+                .row.justify-content-center.section-title.dark-green Бакові суміші
+                .row.justify-content-center.mixtures
+                    .mixtures__title-wrapper.col-8
+                        .mixtures__title.mixtures__title__active.mixtures-title-1 Соняшник та соя
+                        .mixtures__title.mixtures-title-2 Ріпак та соя
+                    .mixtures__content-wrapper.col-11
+                        .mixtures__content.mixtures-content-1.mixtures__content__active
+                            .row
+                                .mixtures__content__left.col-6
+                                    .mixtures__content__title На соняшнику та сої до сходів культури рекомендується бакова су
+                                    .mixtures__list
+                                        .mixtures__list__title Переваги бакової суміші
+                                        .mixtures__list__text Підсилений контроль злакових та дводольних бур’янів, зокрема:
+                                        .mixtures__list__pros__wrapper
+                                            .mixtures__list__pros.col-7
+                                                ul
+                                                    li Гірчак види
+                                                    li Дурман звичайний
+                                                    li Кропива види
+                                                    li Спориш звичайний
+                                                    li Просо волосовиден
+                                            .mixtures__list__img.col-5
+                                                img(src="/assets/images/section-4/tab-img-1.png", alt="")
+                                                img(src="/assets/images/section-4/tab-img-2.png", alt="")
+                                .mixtures__content__right.col-6
+                                    +culture_tab('2', [
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},
+                                        {'pos': '00', 'src': 'text'},                        
+                                    ])
+                            .mixtures__content.mixtures-content-1
+                                .mixtures__content__left
+                                    .mixtures__content__title На соняшнику та сої до сходів культури рекомендується бакова су
+                                .mixtures__content__right
+        section.section-6
+            .container
+                img.section-6__img_corn.img-left(src='/assets/images/section-6/sect-6-img-left.svg' alt='')
+                img.section-6__img_corn.img-right(src='/assets/images/section-6/sect-6-img-right.svg' alt='')
+                .row
+                    .col-12.text-center
+                        .section-6__title Де придбати
+                .row
+                    .col-12.col-md-7.col-lg-6.col-xl-7
+                        .section-6__img
+                        img(src='/assets/images/map_new.svg' alt='')
+                    .col-12.col-md-5.col-lg-6.col-xl-5
+                        .row
+                            .col-12
+                                .regional-title Регіональні представники
+                        .row
+                            .col-12
+                                .regional-items(style='background: #00aa4e;')
+                                    .regional-items__button
+                                    .regional-items__name Віктор Попрожук
+                                    .regional-items__district Рівненська, Житомирська, Київська та Волинська області
+                                    .regional-items__hidden
+                                        p +38 (095) 288-49-07
+                                        div
+                                        a(href='mailto:Viktor.Poprozhuk@nufarm.com') Viktor.Poprozhuk@nufarm.com
+                                .regional-items(style='background: #8f9b51;')
+                                    .regional-items__button
+                                    .regional-items__name Іван Козира
+                                    .regional-items__district
+                                        | Львівська, Хмельницька, Тернопільська, Івано-Франківська, Чернівецька та Закарпатська області
+                                    .regional-items__hidden
+                                        p +38 (050) 312-69-14
+                                        div
+                                        a(href='mailto:Ivan.Kozyra@nufarm.com') Ivan.Kozyra@nufarm.com
+                                .regional-items(style='background: #859e26;')
+                                    .regional-items__button
+                                    .regional-items__name Василь Євтушенко
+                                    .regional-items__district Харківська, Дніпропетровська та Запорізька області
+                                    .regional-items__hidden
+                                        p +38 (050) 166-75-59
+                                        div
+                                        a(href='mailto:Vasyl.Yevtushenko@nufarm.com') Vasyl.Yevtushenko@nufarm.com
+                                .regional-items(style='background: #02893c;')
+                                    .regional-items__button
+                                    .regional-items__name Олександр Мороз
+                                    .regional-items__district Одеська, Миколаївська та Херсонська області
+                                    .regional-items__hidden
+                                        p +38 (050) 282-01-01
+                                        div
+                                        a(href='mailto:Oleksandr.Moroz@nufarm.com') Oleksandr.Moroz@nufarm.com
+                                .regional-items(style='background: #1b754f;')
+                                    .regional-items__button
+                                    .regional-items__name Максим Пташник
+                                    .regional-items__district Вінницька, Черкаська та Кіровоградська області
+                                    .regional-items__hidden
+                                        p +38 (050) 418-33-88
+                                        div
+                                        a(href='mailto:Maxym.Ptashnyk@nufarm.com') Maxym.Ptashnyk@nufarm.com
+                                .regional-items(style='background: #b49857;')
+                                    .regional-items__button
+                                    .regional-items__name Сергій Пілат
+                                    .regional-items__district Чернігівська, Сумська та Полтавська області
+                                    .regional-items__hidden
+                                        p +38 (066) 281-81-84
+                                        div
+                                        a(href='mailto:Sergii.Pilat@nufarm.com') Sergii.Pilat@nufarm.com
+                .row
+                    .col-12
+                        .distributor-title Офіційні дистриб’ютори
+                .row
+                    .col-12
+                        .row.distributor-items-wrapp.justify-content-center
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «АГРОЗАХИСТ ДОНБАС»
+                                .distributor-item__address
+                                    | 08162, Київська обл., Києво-Святошинський р-н, смт Чабани,
+                                    | вул. Машинобудівників,
+                                    | буд. 4В
+                                .distributor-item__phone
+                                    p +38 (044) 205-35-45
+                                .distributor-item__mail
+                                    a(href='mailto:info@agrozahist-donbas.com.ua')
+                                            | info@agrozahist-donbas.
+                                            br
+                                            | com.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «АГРОЗАХИСТ ХАРКІВ»
+                                .distributor-item__address
+                                    | 61098, м. Харків,
+                                    | вул. Кашуби, буд. 10
+                                .distributor-item__phone
+                                    p +38 (057) 372-61-68
+                                .distributor-item__mail
+                                    a(href='mailto:az_harkiv@ukr.net') az_harkiv@ukr.net
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «АГРОРОСЬ»
+                                .distributor-item__address
+                                    | 19400, Черкаська обл., м. Корсунь-Шевченківський, вул. Шевченка, 39
+                                .distributor-item__phone
+                                    p +38 (04735) 2-58-44
+                                .distributor-item__mail
+                                    a(href='mailto:info@agroros.com.ua') info@agroros.com.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «АГРАРНО-ХІМІЧНА КОМПАНІЯ»
+                                .distributor-item__address
+                                    | 03040, м. Київ,
+                                    | вул. Стельмаха, 6а
+                                .distributor-item__phone
+                                    p +38 (044) 258-91-21
+                                .distributor-item__mail
+                                    a(href='mailto:uahk@uahk.com.ua') uahk@uahk.com.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «АГРО ПРЕСТИЖ»
+                                .distributor-item__address
+                                    | 46008, м. Тернопіль, вул. Острозького, буд. 48, офіс 41
+                                .distributor-item__phone
+                                    p +38 (0352) 43-59-86
+                                .distributor-item__mail
+                                    a(href='mailto:rostyslav.sapuzhak@agroprestyzh.com')
+                                        | rostyslav.sapuzhak@
+                                        br
+                                        |                                 agroprestyzh.com
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «АГРОПРОМ-ЦЕНТР»
+                                .distributor-item__address
+                                    | 04080, м. Київ, вул. Кирилівська, буд. 60, корпус П (Кирилівська 60А), офіс 9
+                                .distributor-item__phone
+                                    p +38 (050) 486-76-80
+                                .distributor-item__mail
+                                    a(href='mailto:boris.tsibulnik@gmail.com')
+                                        | boris.tsibulnik@
+                                        br
+                                        |                                 gmail.com
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ПП «АДЛЄР»
+                                .distributor-item__address
+                                    | 10007 м. Житомир, вул Авіаторів, 9
+                                .distributor-item__phone
+                                    p +38 (080) 050-14-32
+                                .distributor-item__mail
+                                    a(href='mailto:mail@adler.com.ua')
+                                        | mail@
+                                        br
+                                        |                                 adler.com.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ПП «БІЗОН-ТЕХ 2006»
+                                .distributor-item__address
+                                    | 03189, м. Київ,
+                                    br
+                                    |                                 вул. Ломоносова,
+                                    br
+                                    |                                 буд. 71 Г
+                                .distributor-item__phone
+                                    p +38 (044) 391-44-40
+                                .distributor-item__mail
+                                    a(href='mailto:office@bizontech.ua') office@bizontech.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «ГАРДЕН КЛАБ»
+                                .distributor-item__address
+                                    | 33003, м. Рівне, вул. Гагаріна, 39, к. 5А
+                                .distributor-item__phone
+                                    p +38 (0362) 64-56-06
+                                .distributor-item__mail
+                                    a(href='mailto:office@gardenclub.net.ua') office@gardenclub.net.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span МПП ФІРМА «ЕРІДОН»
+                                .distributor-item__address
+                                    | 08131, Київська обл., Києво-Святошинський р-н, с. Софіївська Борщагівка (промвузол Жуляни),
+                                    | вул. Чорновола, 30
+                                .distributor-item__phone
+                                    p +38 (044) 536-92-00
+                                    p +38 (044) 501-88-30
+                                .distributor-item__mail
+                                    a(href='mailto:office@eridon.ua') office@eridon.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «ЗАХІД АГРОБІЗНЕС»
+                                .distributor-item__address
+                                    | 33013, м. Рівне, вул. Князя Володимира, 75, оф. 19
+                                .distributor-item__phone
+                                    p +38 (0362) 26-39-17
+                                .distributor-item__mail
+                                    a(href='mailto:zaxidagro@ukr.net') zaxidagro@ukr.net
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «КОРНЕР АГРО»
+                                .distributor-item__address
+                                    | 23222, Вінницька обл., Вінницький р-н, с.Зарванці, вул.Соснова, 17 , оф.107
+                                .distributor-item__phone
+                                    p +38 (067) 430-74-81
+                                .distributor-item__mail
+                                    a(href='mailto:Korner12@ukr.net') Korner12@ukr.net
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «ПЛАНТАГРО»
+                                .distributor-item__address
+                                    | 08131, Київська обл., Києво-Святошинський р-н, с.Софіївська Борщагівка,
+                                    | пров. Чорновола, 3
+                                .distributor-item__phone
+                                    p +38 (044) 539-92-19
+                                .distributor-item__mail
+                                    a(href='mailto:info@plant-agro.com') info@plant-agro.com
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ПП «ПОДІЛЛЯ-АГРОХІМСЕРВІС»
+                                .distributor-item__address
+                                    | 24240, Вінницька обл., Томашпільський р-н,
+                                    | смт. Вапнярка,
+                                    | вул. Леніна, 233
+                                .distributor-item__phone
+                                    p +38 (04350) 3-16-25
+                                .distributor-item__mail
+                                    a(href='mailto:podil-agrohimservise@ukr.net')
+                                        | podil-agrohimservise@
+                                        br
+                                        | ukr.net
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «СЕРВІС-АГРОЗАХІД»
+                                .distributor-item__address
+                                    | 47722, Тернопільська обл., Тернопільський р-н, с. Великі Гаї, вул. Підлісна, буд. 27
+                                .distributor-item__phone
+                                    p +38 (0352) 25-15-00
+                                    p +38 (067) 243-81-91
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «СОЛАГРО»
+                                .distributor-item__address
+                                    | 01054, м. Київ, вул.Олеся Гончара, 41, літера А, 5 і 6 поверхи
+                                .distributor-item__phone
+                                    p +38 (044) 233-61-05
+                                .distributor-item__mail
+                                    a(href='mailto:info@solagro.com.ua')
+                                        | info@
+                                        br
+                                        | solagro.com.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «СПЕКТР-АГРО»
+                                .distributor-item__address
+                                    | 08700, Київська обл.,
+                                    | м. Обухів,
+                                    | вул. Промислова, 20
+                                .distributor-item__phone
+                                    p +38 (044) 520-94-30
+                                .distributor-item__mail
+                                    a(href='mailto:agro@spectr-agro.com') agro@spectr-agro.com
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «ПІВДЕНЬ-АГРОХІМПРОЕКТ»
+                                .distributor-item__address
+                                    | 65005, м. Одеса, Малиновський р-н, вул. Бугаївська 21, оф. 104
+                                .distributor-item__phone
+                                    p +38 (048) 732-71-72
+                                .distributor-item__mail
+                                    a(href='mailto:office@agroalians-2007.com.ua')
+                                        | office@agroalians-2007.
+                                        br
+                                        | com.ua
+                            .col-6.col-md-3.distributor-item
+                                .distributor-item__name
+                                    span ТОВ «ФЛОРА»
+                                .distributor-item__address
+                                    | 18005, м. Запоріжжя, вул. Стартова 3В
+                                .distributor-item__phone
+                                    p +38 (050) 488-90-60
+                                .distributor-item__mail
+                                    a(href='mailto:office@flora-agro.com.ua') office@flora-agro.com.ua
+                .row.d-none.d-md-flex
+                    .col-12.text-center
+                        .distributor-button
+                            span(data-all='Переглянути усі' data-hide='Згорнути') Переглянути усі
+        footer#footer_.section-box-footer
+            .container(style='position: relative')
+                .btn_up
+                .row
+                    .col
+                        .footer-copyright © Nufarm, All rights reserved.
+                    .col-auto
+                        .footer-social
+                            ul
+                                li
+                                    a.fb(href='https://www.facebook.com/nufarmua/' target='_blank')
+                                        img(src='/assets/images/social/facebook-logo.svg' alt='')
+                                li
+                                    a.inst(href='https://www.instagram.com/nufarmua/' target='_blank')
+                                        img(src='/assets/images/social/seti-1.svg' alt='')
+                                li
+                                    a.yt(href='https://www.youtube.com/channel/UC6SLMbsg9ATTWI4XLRegL_g' target='_blank')
+                                        img(src='/assets/images/social/youtube.svg' alt='')
+
+
+
+
+
 
 
